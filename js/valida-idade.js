@@ -7,7 +7,7 @@ export default function ehMaiorDeIdade(campo){
 
 function validaIdade (data){
     const dataAtual = new Date(); /* constante para identicar dia atual que ia somar apos 18 anos a mais com a proxima const*/
-    const dataMais18  = new Date (data.getUTCFullYear() +18, data.getUTCMonth(), data.getUTCDate()); /*ia verificar  dia mes e ano*/
+    const dataMais18  = new Date (data.getUTCFullYear() +18, data.getUTCMonth(), data.getUTCDate()); /* vai verificar dia mes e ano*/
 
     return dataAtual >= dataMais18;
 }
