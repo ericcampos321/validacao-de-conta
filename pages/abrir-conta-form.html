@@ -24,7 +24,40 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+            <a href='../index.html' class="cabecalho__logo-link">
+                <img src="../img/logo.webp" alt="logo-ong">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Conta</a>
+                </li>
+                
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+    <!--<header class="cabecalho">
         <a href='../index.html' class="cabecalho__logo-link">
             <img src="../img/logo.webp" alt="logo-ong">
         </a>
@@ -45,51 +78,128 @@
                 <a href="#" class="cabecalho-lista__item-botao">Acessar conta</a>
             </li>
         </ul>
-    </header>
+    </header>-->
 
     <section class="banner">
-        <h3 class="banner__titulo">Primeiro passo para fazer o cadastro para a castração!</h3>
+        <div class="container">
+            <h3 class="banner__titulo responsive-text">Primeiro passo para fazer o cadastro para a castração!</h3>
+        </div>
     </section>
 
     <main class="container">
         <ul class="breadcrumb">
-            <li>Inicio</li>
+            <li><a href="../index.html">Inicio</a></li>
             <li class="breadcrumb__pagina">Cadastrar</li>
         </ul>
 
-        <section class="formulario container">
+        <section class="formulario">
             <div class="formulario__container">
                 <img src="../img/status-1.png" alt="Etapa um de três" class="formulario__etapas">
                 <h2 class="formulario__titulo-texto">Preencha os campos abaixo!</h2>
             </div>
 
             <form class="principal__formulario" data-formulario>
+                <h3 class="principal__subtitulo">Dados pessoais</h3><br>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="nome">Nome</label>
                     <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required/>
-                    <span class="mensagem-erro"></span>
+                    <span id="mensagem-erro"></span>
                 </fieldset>
 
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="email">E-mail</label>
                     <input name="email" id="email" class="campo__escrita" type="email" required/>
-                    <span class="mensagem-erro"></span>
+                    <span id="mensagem-erro"></span>
                 </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="rg">RG</label>
-                    <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" required/>
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
-                    <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"/> <!--Mascara ( pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" )-->
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
-                    <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date" required/>
-                    <span class="mensagem-erro"></span>
-                </fieldset>
+                
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="rg">RG</label>
+                        <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" required/>
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    
+                    <div class="formulario__dupla container">
+                        <fieldset class="formulario__campo">
+                            <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+                            <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" placeholder="XXX.XXX.XXX-XX" required 1651965type="text" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"/> <!--Mascara ( pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" )-->
+                            <span id="mensagem-erro"></span>
+                        </fieldset>
+                                        
+                                        <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
+                        <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date" required/>
+                        <span id="mensagem-erro"></span>
+                                        </fieldset>
+                    </div>
+
+                <h3 class="principal__subtitulo">Endereço</h3>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="cep">CEP</label>
+                <input name="cep" id="cep" class="campo__escrita" required />
+                <div id="erro"></div>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="endereco">Endereço</label>
+                <input name="endereco" id="endereco" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="numero">Numero</label>
+                    <input name="numero" id="numero" class="campo__escrita" required />
+                </div>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="complemento">Complemento</label>
+                    <input name="complemento" id="complemento" class="campo__escrita" />
+                </div>
+            </div>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="bairro">Bairro</label>
+                <input name="bairro" id="bairro" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="cidade">Cidade</label>
+                    <input name="cidade" id="cidade" class="campo__escrita" required />
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="estado">UF</label>
+                    <select id="estado" name="estado" class="campo__escrita">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+
+            </div>
+
                 <fieldset class="formulario__termos">
                     <input name="termos" class="termos__input" type="checkbox">
                     <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme
@@ -98,11 +208,13 @@
                         Privacidade do banco.</p>
                     <span class="mensagem-erro"></span>
                 </fieldset>
-
                 <div>
                     <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
                     <span class="mensagem-erro"></span>
                 </div>
+
+
+                
             </form>
 
         </section>
@@ -112,6 +224,7 @@
    
 
     <script src="../js/script.js" type="module"></script>
+    <script src="../js/viacep.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
