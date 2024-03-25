@@ -3,7 +3,7 @@ async function buscaEndereco(cep){
    var mensagemErro = document.querySelector('#erro');
    mensagemErro.innerHTML = "";
     try{
-       var consultaCEP =  await fetch(`http://viacep.com.br/ws/${cep}/json/`) /*foi feita a requisição */
+       var consultaCEP =  await fetch(`https://viacep.com.br/ws/${cep}/json/`) /*foi feita a requisição */
        var consultaCEPConvertida = await consultaCEP.json(); /* vai ser convertido por uma variável que sera mais assíncrono("await" é utilizado para esperar por uma Promise)*/
        if (consultaCEPConvertida.erro) {
             throw Error('CEP não existente');
