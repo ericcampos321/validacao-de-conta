@@ -1,9 +1,12 @@
 .cabecalho {
     display: flex;
     align-items: center;
+    height: 50px;
 }
 
-.cabecalho > img{
+
+
+.navbar > img{
     width: 100px;
 }
 
@@ -16,28 +19,9 @@
     margin: 0 2em;
 }
 
-.cabecalho__logo-inicio {
-    font-family: var(--fonte-logo);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--vermelho-ong);
-}
-
 .cabecalho__logo-final {
     font-weight: 400;
     font-style: italic;
-}
-
-.cabecalho__pesquisa {
-    border: 2px solid #000000;
-    border-radius: 20px;
-    padding: .7em 1em;
-    width: 20vw;
-}
-
-.cabecalho__pesquisa::placeholder {
-    font-size: 18px;
-    background: url("../img/ícone\ busca.png") no-repeat right center;
 }
 
 .cabecalho-lista__item a {
@@ -50,7 +34,7 @@
 
 .cabecalho-lista__item-botao {
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: .5em 1em;
     color: var(--vermelho-ong);
     border: var(--vermelho-ong) 2px solid;
@@ -61,17 +45,3 @@
     color: var(--branco);
 }
 
-@media screen and (max-width: 900px) {
-    .cabecalho {
-        margin: 2em;
-    }
-
-    .cabecalho__pesquisa,
-    .cabecalho-lista__link {
-        display: none;
-    }
-
-    .cabecalho-lista__item-botao {
-        display: block;
-    }
-}

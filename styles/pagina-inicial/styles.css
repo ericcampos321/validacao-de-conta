@@ -103,23 +103,3 @@
 }
 
 
-
-@media screen and (max-width: 798px) {
-    .beneficios-lista {
-        display: block;
-        margin: 1em;
-    }
-
-    .beneficios-lista__item {
-        width: 100%;
-    }
-
-    .conta {
-        display: block;
-
-    }
-
-    .conta__titulo {
-        padding: 1em 0;
-    }
-}

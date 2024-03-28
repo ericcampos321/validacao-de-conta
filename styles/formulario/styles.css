@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 30vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,6 +100,7 @@
 
 .formulario__dupla {
     display: flex;
+    padding: 0;
 }
 
 .formulario__botao,
@@ -176,6 +177,17 @@
 
 @media (max-width: 576px) {
     .responsive-text {
-      font-size: 16px;
+      font-size: 22px;
+    }
+
+    .banner-titulo{
+        display: flex;
+        position: relative;
+        top: 50px;
+    }
+
+    .banner__titulo{
+        display: flex;
+        top:1000px;
     }
   }
