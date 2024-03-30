@@ -13,14 +13,18 @@
 
 
 .banner__titulo {
-    background-color: rgba(240, 255, 255, 0.836);
     font-weight: 600;
-    color: var(--preto);
-    font-size: 32px;
+    font-size: 40px;
     line-height: 39px;
     width: 40%;
-    margin: 0 auto;
-    border-radius: 20px;
+    color: var(--branco);
+    background: var(--vermelho-ong);
+    position: relative;
+    top: 110px;
+    width: 32%;
+    margin: 0 3em;
+    border-radius: 40% 10% 40%;
+    cursor: pointer;
 }
 
 /*.container {
@@ -36,6 +40,11 @@
     display: inline;
     margin-top: 20px;
     font-size: 16px;
+    color: var(--vermelho-ong);
+}
+
+.breadcrumb li a {
+    text-decoration: none;
     color: var(--vermelho-ong);
 }
 
@@ -80,11 +89,12 @@
 }
 
 .campo__escrita {
+    background-color: rgba(165, 42, 42, 0.089);
     display: block;
     border: 1px solid var(--vermelho-ong);
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
-    padding: .5em;
+    padding: .3em;
     margin-top: .5em;
 
 }
@@ -176,9 +186,17 @@
 }
 
 @media (max-width: 576px) {
-    .responsive-text {
-      font-size: 22px;
+
+    .banner__titulo {
+        background: var(--vermelho-ong);
+        position: relative;
+        top: 50px;
+        width: 32%;
+        margin: 0 3em;
+        border-radius: 40% 10% 40%;
+       
     }
+    
 
     .banner-titulo{
         display: flex;
@@ -186,8 +204,4 @@
         top: 50px;
     }
 
-    .banner__titulo{
-        display: flex;
-        top:1000px;
-    }
   }

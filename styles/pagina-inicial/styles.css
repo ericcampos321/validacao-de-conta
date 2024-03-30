@@ -18,8 +18,12 @@
 }
 
 .banner__titulo {
+    background: var(--vermelho-ong);
+    position: relative;
+    top: 25vh;
     width: 32%;
-    margin: 0 3em
+    margin: 0 3em;
+    border-radius: 40% 10% 40%;
 }
 
 .servicos__titulo,
@@ -101,5 +105,3 @@
     background-size: contain;
     display: inline-block;
 }
-
-
