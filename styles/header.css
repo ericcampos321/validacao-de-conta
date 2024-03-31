@@ -30,5 +30,6 @@
 .cabecalho-lista__item-botao:hover{
     background:var(--vermelho-ong);
     color: var(--branco);
+    transition: .3s;
 }
 

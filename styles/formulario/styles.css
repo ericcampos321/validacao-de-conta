@@ -27,6 +27,11 @@
     cursor: pointer;
 }
 
+.navbar-toggler{
+    background-color: rgba(216, 216, 216, 0.281);
+    
+}
+
 /*.container {
     margin: 2em 5em;
 }*/
@@ -38,7 +43,7 @@
 
 .breadcrumb li {
     display: inline;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 16px;
     color: var(--vermelho-ong);
 }
@@ -73,7 +78,7 @@
     font-size: 17px;
     line-height: 26px;
     color: var(--vermelho-ong);
-    margin: 3em 0 2em 0;
+    margin: 2em 0 2em 0;
 }
 
 .formulario__titulo-texto {
