@@ -32,6 +32,10 @@
     
 }
 
+a{
+    text-decoration: none;
+}
+
 /*.container {
     margin: 2em 5em;
 }*/
@@ -94,7 +98,7 @@
 }
 
 .campo__escrita {
-    background-color: rgba(165, 42, 42, 0.089);
+    background-color: rgba(165, 42, 42, 0.048);
     display: block;
     border: 1px solid var(--vermelho-ong);
     border-radius: 5px;
